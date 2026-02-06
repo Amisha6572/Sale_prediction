@@ -10,3 +10,5 @@ __pycache__/
 
 # Ignore secrets
 *.env
+# Ignore Streamlit configuration
+.streamlit/

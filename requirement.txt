@@ -1,8 +1,0 @@
-ipykernel
-matplotlib
-scikit-learn
-seaborn
-streamlit
-joblib
-pickle
-SVC
