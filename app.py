@@ -29,7 +29,7 @@ st.write("Predict whether Sales will Increase or Decrease based on Advertisement
 # -------------------------------
 # Load Dataset
 # -------------------------------
-data = pd.read_csv("sales_data.csv")
+data = pd.read_csv("Advertisement.csv")
 
 st.subheader("Sample Dataset")
 st.dataframe(data.head())
