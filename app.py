@@ -1,9 +1,11 @@
 import streamlit as st
 import numpy as np
 import pickle
+import os
 
 # Load trained model
-model = pickle.load(open("best_model.pkl", "rb"))
+model_path = os.path.join(os.path.dirname(__file__), "best_model.pkl")
+model = pickle.load(open("model_path", "rb"))
 
 st.title("📈 Sales Increase/Decrease Prediction App")
 
