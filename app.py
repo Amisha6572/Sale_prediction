@@ -184,13 +184,12 @@ with col3:
     """, unsafe_allow_html=True)
     newspaper = st.number_input("💰 Newspaper Budget ($)", min_value=0.0, key="newspaper")
 
-# Prediction section
-st.markdown("<div style='margin: 30px 0;'></div>", unsafe_allow_html=True)
+# Prediction section - Centered below Radio
+st.markdown("<div style='margin: 40px 0 20px 0;'></div>", unsafe_allow_html=True)
 
-# Prediction button and results
-col_left, col_center, col_right = st.columns([0.5, 2, 0.5])
+col_pred_left, col_pred_center, col_pred_right = st.columns([1, 1, 1])
 
-with col_center:
+with col_pred_center:
     if st.button("🚀 Predict Sales Trend", key="predict_btn"):
         input_data = np.array([[tv, radio, newspaper]])
         prediction = model.predict(input_data)
