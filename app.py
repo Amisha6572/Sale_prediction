@@ -66,7 +66,7 @@ def add_bg_style():
     
     .stNumberInput > label {
         font-weight: 600;
-        color: #4a5568;
+        color: #000000;
     }
     
     /* Column styling */
@@ -104,6 +104,12 @@ def add_bg_style():
         justify-content: center;
         align-items: center;
         margin: 30px 0;
+    }
+    
+    /* Center align button */
+    .stButton {
+        display: flex;
+        justify-content: center;
     }
     
     /* Success message */
