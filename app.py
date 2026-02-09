@@ -84,18 +84,26 @@ def add_bg_style():
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         border: none;
-        padding: 12px 40px;
-        border-radius: 8px;
-        font-size: 18px;
-        font-weight: 600;
+        padding: 20px 60px;
+        border-radius: 10px;
+        font-size: 24px;
+        font-weight: 700;
         width: 100%;
         cursor: pointer;
         transition: transform 0.2s, box-shadow 0.2s;
     }
     
     .stButton > button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+    }
+    
+    /* Centered button container */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
     }
     
     /* Success message */
@@ -174,9 +182,9 @@ with col3:
 st.markdown("<div style='margin: 30px 0;'></div>", unsafe_allow_html=True)
 
 # Prediction button and results
-col_button1, col_button2, col_button3 = st.columns([1, 2, 1])
+col_left, col_center, col_right = st.columns([0.5, 2, 0.5])
 
-with col_button2:
+with col_center:
     if st.button("🚀 Predict Sales Trend", key="predict_btn"):
         input_data = np.array([[tv, radio, newspaper]])
         prediction = model.predict(input_data)
